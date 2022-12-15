@@ -44,6 +44,10 @@ class Category(models.Model):
         return self.slug
 
 
+def get_current_year():
+    return datetime.now().year
+
+
 class Title(models.Model):
     """Модель произведения."""
     name = models.CharField(
@@ -51,8 +55,12 @@ class Title(models.Model):
         max_length=100,
     )
     year = models.IntegerField(
-        verbose_name='Год',
-        validators=[MaxValueValidator(int(datetime.now().year))]
+        validators=[
+            MaxValueValidator(
+                limit_value=get_current_year,
+                message='Произведение еще не вышло!'
+            )
+        ]
     )
     rating = models.IntegerField(
         null=True,
