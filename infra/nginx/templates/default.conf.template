@@ -1,0 +1,14 @@
+server {
+    listen ${PORT};
+    server_name ${LOCALHOST};
+    server_tokens off;
+    location /static/ {
+        root /var/html/;
+    }
+    location /media/ {
+        root /var/html/;
+    }
+    location / {
+        proxy_pass http://${UPSTREAM};
+    }
+}
