@@ -1,4 +1,4 @@
-name: YaMDb API workflow
+name: API YaMDb Project CI/CD
 
 on: [push]
 
