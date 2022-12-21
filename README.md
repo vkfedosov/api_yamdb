@@ -1,8 +1,9 @@
 # Проект YaMDb с применением CI/CD
-![](https://github.com/vkfedosov/docs/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
 Проект YaMDb собирает отзывы пользователей на различные произведения такие как
 фильмы, книги и музыка. Для приложения настроен Continuous Integration (CI) и
 Continuous Deployment (CD).
+
+![API YaMDb CI/DI](https://github.com/vkfedosov/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
 
 Реализован:
 * автоматический запуск тестов;
