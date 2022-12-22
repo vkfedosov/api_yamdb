@@ -131,8 +131,35 @@ SECRET_KEY='<secret_key>' pytest
 ## Workflow
 
 Для использования Continuous Integration (CI) и Continuous Deployment (CD): в
-репозитории GitHub ```Settings/Secrets/Actions``` прописать Secrets -
-переменные доступа к сервисам.
+репозитории GitHub Actions ```Settings/Secrets/Actions``` прописать Secrets -
+переменные окружения для доступа к сервисам:
+
+```
+SECRET_KEY                     # стандартный ключ, который создается при старте проекта
+DEBUG=False                    # опция отладчика True/False
+ALLOWED_HOSTS                  # список хостов/доменов, для которых дотсупен текущий проект
+
+ENGINE=django.db.backends.postgresql
+DB_NAME                        # имя БД - postgres (по умолчанию)
+POSTGRES_USER                  # логин для подключения к БД - postgres (по умолчанию)
+POSTGRES_PASSWORD              # пароль для подключения к БД (установите свой)
+DB_HOST=db                     # название сервиса (контейнера)
+DB_PORT=5432                   # порт для подключения к БД
+
+LOCALHOST                      # имя хоста/домена
+PORT                           # порт для подключения
+UPSTREAM                       # название сервиса (контейнера) в формате: <название сервиса>:<порт>
+
+DOCKER_USERNAME                # имя пользователя в DockerHub
+DOCKER_PASSWORD                # пароль пользователя в DockerHub
+HOST                           # ip_address сервера
+USER                           # имя пользователя
+SSH_KEY                        # приватный ssh-ключ (cat ~/.ssh/id_rsa)
+PASSPHRASE                     # кодовая фраза (пароль) для ssh-ключа
+
+TELEGRAM_TO                    # id телеграм-аккаунта (можно узнать у @userinfobot, команда /start)
+TELEGRAM_TOKEN                 # токен бота (получить токен можно у @BotFather, /token, имя бота)
+```
 
 При push в ветку main автоматически отрабатывают сценарии:
 * *tests* - проверка кода на соответствие стандарту PEP8 и запуск pytest.
@@ -184,34 +211,6 @@ sudo mkdir nginx
   ```
   scp docker-compose.yaml <username>@<ip_address>:/home/<username>/nginx/templates/default.conf.template
   ```
-
-* Добавить в Secrets GitHub Actions переменные окружения:
-```
-SECRET_KEY                     # стандартный ключ, который создается при старте проекта
-DEBUG=False                    # опция отладчика True/False
-ALLOWED_HOSTS                  # список хостов/доменов, для которых дотсупен текущий проект
-
-ENGINE=django.db.backends.postgresql
-DB_NAME                        # имя БД - postgres (по умолчанию)
-POSTGRES_USER                  # логин для подключения к БД - postgres (по умолчанию)
-POSTGRES_PASSWORD              # пароль для подключения к БД (установите свой)
-DB_HOST=db                     # название сервиса (контейнера)
-DB_PORT=5432                   # порт для подключения к БД
-
-LOCALHOST                      # имя хоста/домена
-PORT                           # порт для подключения
-UPSTREAM                       # название сервиса (контейнера) в формате: <название сервиса>:<порт>
-
-DOCKER_USERNAME                # имя пользователя в DockerHub
-DOCKER_PASSWORD                # пароль пользователя в DockerHub
-HOST                           # ip_address сервера
-USER                           # имя пользователя
-SSH_KEY                        # приватный ssh-ключ (cat ~/.ssh/id_rsa)
-PASSPHRASE                     # кодовая фраза (пароль) для ssh-ключа
-
-TELEGRAM_TO                    # id телеграм-аккаунта (можно узнать у @userinfobot, команда /start)
-TELEGRAM_TOKEN                 # токен бота (получить токен можно у @BotFather, /token, имя бота)
-```
 
 ## После успешного деплоя
 * Создать суперпользователя:
