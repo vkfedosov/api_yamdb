@@ -45,12 +45,10 @@ Users):
 система регистрации и аутентификации, права доступа, работа с токеном, система
 подтверждения e-mail, поля;
 
-[Fedoska48](https://github.com/Fedoska48) - категории (Categories), жанры (
-Genres)
+[Fedoska48](https://github.com/Fedoska48) - категории (Categories), жанры (Genres)
 и произведения (Titles): модели, view и эндпойнты для них;
 
-[LevLM](https://github.com/LevLM) (teamlead) - отзывы (Review) и комментарии (
-Comments):
+[LevLM](https://github.com/LevLM) (teamlead) - отзывы (Review) и комментарии (Comments):
 модели и view, эндпойнты, права доступа для запросов. Рейтинги произведений.
 
 ## Стек технологий:
@@ -79,10 +77,10 @@ Comments):
 ## Начало работы
 * Клонировать репозиторий, перейти в директорию с проектом:
 ```
-git clone git@github.com:vkfedosov/yamdb_final.git
+git clone git@github.com:vkfedosov/api_yamdb_ci_cd.git
 ```
 ```
-cd yamdb_final
+cd api_yamdb_ci_cd
 ```
 
 * Установить виртуальное окружение, активировать его:
@@ -179,7 +177,7 @@ ssh <username>@<ip_address>
 
 * Остановить службу ```nginx```:
 ```
- sudo systemctl stop nginx
+sudo systemctl stop nginx
 ```
 
 * Установить Docker и Docker-compose:
@@ -192,7 +190,7 @@ sudo apt install docker-compose -y
 
 * Проверить корректность установки Docker-compose:
 ```
-sudo  docker-compose --version
+sudo docker-compose --version
 ```
 * На сервере создать директорию ```nginx```:
 ```
@@ -220,7 +218,7 @@ docker-compose exec web python manage.py createsuperuser
 
 * Для проверки работоспособности приложения, перейти на страницу:
 ```
- http:/<ip_address>/admin/
+http:/<ip_address>/admin/
 ```
 
 ## Документация для YaMDb доступна по адресу:
