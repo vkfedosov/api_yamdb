@@ -40,12 +40,10 @@ Users):
 система регистрации и аутентификации, права доступа, работа с токеном, система
 подтверждения e-mail, поля;
 
-[Fedoska48](https://github.com/Fedoska48) - категории (Categories), жанры (
-Genres)
+[Fedoska48](https://github.com/Fedoska48) - категории (Categories), жанры (Genres)
 и произведения (Titles): модели, view и эндпойнты для них;
 
-[LevLM](https://github.com/LevLM) (teamlead) - отзывы (Review) и комментарии (
-Comments):
+[LevLM](https://github.com/LevLM) (teamlead) - отзывы (Review) и комментарии (Comments):
 модели и view, эндпойнты, права доступа для запросов. Рейтинги произведений.
 
 ## Стек технологий:
