@@ -1,8 +1,8 @@
-# API YaMDb с применением CI/CD
+# Проект API YaMDb с применением CI/CD
 
 [![](https://github.com/vkfedosov/api_yamdb/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/vkfedosov/api_yamdb/actions/workflows/yamdb_workflow.yml)
 
-Проект API YaMDb собирает отзывы пользователей на различные произведения такие как
+API YaMDb собирает отзывы пользователей на различные произведения такие как
 фильмы, книги и музыка. Для приложения настроен Continuous Integration (CI) и
 Continuous Deployment (CD).
 
