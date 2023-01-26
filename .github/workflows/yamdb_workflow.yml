@@ -1,9 +1,6 @@
 name: API YaMDb Project CI/CD
 
-on:
-  push:
-    paths-ignore:
-      - '**/README.md'
+on: [push]
 
 jobs:
   tests:
