@@ -1,8 +1,8 @@
-# Проект YaMDb с применением CI/CD
+# API YaMDb с применением CI/CD
 
-[![](https://github.com/vkfedosov/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/vkfedosov/yamdb_final/actions/workflows/yamdb_workflow.yml)
+[![](https://github.com/vkfedosov/api_yamdb/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/vkfedosov/api_yamdb/actions/workflows/yamdb_workflow.yml)
 
-Проект YaMDb собирает отзывы пользователей на различные произведения такие как
+Проект API YaMDb собирает отзывы пользователей на различные произведения такие как
 фильмы, книги и музыка. Для приложения настроен Continuous Integration (CI) и
 Continuous Deployment (CD).
 
@@ -76,10 +76,10 @@ Users): система регистрации и аутентификации, �
 ## Начало работы
 * Клонировать репозиторий, перейти в директорию с проектом:
 ```
-git clone git@github.com:vkfedosov/api_yamdb_ci_cd.git
+git clone git@github.com:vkfedosov/api_yamdb.git
 ```
 ```
-cd api_yamdb_ci_cd
+cd api_yamdb
 ```
 
 * Установить виртуальное окружение, активировать его:
@@ -120,7 +120,7 @@ PORT                           # порт для подключения
 UPSTREAM                       # название сервиса (контейнера) в формате: <название сервиса>:<порт>
 ```
 
-* В директории проекта ```yamdb_final```, запустить ```pytest```:
+* В директории проекта ```api_yamdb```, запустить ```pytest```:
 ```
 SECRET_KEY='<secret_key>' pytest
 ```
